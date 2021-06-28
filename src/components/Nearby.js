@@ -37,8 +37,8 @@ class Nearby extends Component {
 
   render() {
     return (
-      <>
-        <h2>Explore nearby</h2>
+      <div className="container">
+        <h2 style={{ textAlign: 'left', margin: '15px' }}>Explore nearby</h2>
         <div style={{ display: 'flex', flexWrap: 'wrap' }}>
           { this.state.nearbyCards.map(card => {
             return (
@@ -51,7 +51,7 @@ class Nearby extends Component {
             )
           })}
         </div>
-      </>
+      </div>
     );
   }
 }
