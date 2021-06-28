@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import MagnifyingGlass from '../images/mag_glass.svg';
 
 class HeroSearch extends Component {
   constructor(props) {
@@ -10,11 +11,17 @@ class HeroSearch extends Component {
       unrelated: "hayo"
     }
     this.handleTypeChange = this.handleTypeChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleTypeChange(event) {
     console.log(event.target)
     this.setState({ type: event.target.id, "bob": "your uncle" })
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+    console.log("MAG GLASS CLICKED");
   }
 
   render() {
@@ -37,7 +44,7 @@ class HeroSearch extends Component {
     }
 
     return (
-      <>
+      <div className="container">
         <div style={styles}>
           <span
             id='places'
@@ -60,11 +67,11 @@ class HeroSearch extends Component {
             <>
               <div style={ this.state.type === 'places' ? placesStyles : null }>
                 <label>Check in</label>
-                  <input type='text'></input>
+                  <input type='date'></input>
               </div>
               <div style={ this.state.type === 'places' ? placesStyles : null }>
                 <label>Check out</label>
-                  <input type='text'></input>
+                  <input type='date'></input>
               </div>
               <div style={ this.state.type === 'places' ? placesStyles : null }>
                 <label>Guests</label>
@@ -79,9 +86,11 @@ class HeroSearch extends Component {
               </div>
             </>
           }
-          <button type='submit'>Search</button>
+          <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'center' }}>
+            <img src={MagnifyingGlass} alt='submit search' style={{ width: '20px', margin: '4px', marginTop: '6px', alignSelf: 'flex-end' }} onClick={this.handleSubmit} />
+          </div>
         </div>
-      </>
+      </div>
     )
   }
 }
