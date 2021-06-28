@@ -12,7 +12,7 @@ function Hero() {
       />
       <div style={{ position: 'absolute', top: 0, left: 0, right: 0, width: '100%' }}>
         <HeroSearch />
-        <h1>Welcome</h1>
+        <h1 style={{ marginTop: '60px'}} >Welcome to AeroBnB!</h1>
       </div>
     </div>
   )
