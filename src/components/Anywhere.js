@@ -3,7 +3,7 @@ import React from 'react';
 function Anywhere() {
   return (
     <>
-      <h1>Anywhere</h1>
+      <h2>Anywhere</h2>
     </>
   )
 }
