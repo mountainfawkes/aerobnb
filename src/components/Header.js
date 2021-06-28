@@ -3,7 +3,7 @@ import Hero from './Hero';
 
 function Header() {
   return (
-    <div style={{ position: 'relative' }}>
+    <div>
       <Hero />
     </div>
   )
